@@ -5,6 +5,14 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figure.App", "Figure.App\Figure.App.csproj", "{729FE736-D11B-4042-A539-40BCE9262EAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figure.Lib", "Figure.Lib\Figure.Lib.csproj", "{A793D3B0-72FB-4AF1-8823-F22B37A07803}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F719C22C-12A0-4507-A7FE-52CA117D4AA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{88F1C2DD-86E4-4231-9248-8690C5C0DEBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figure.Lib.Tests", "Figure.Lib.Tests\Figure.Lib.Tests.csproj", "{99236366-93A8-49D8-BF94-35657CDB49DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +23,22 @@ Global
 		{729FE736-D11B-4042-A539-40BCE9262EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{729FE736-D11B-4042-A539-40BCE9262EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{729FE736-D11B-4042-A539-40BCE9262EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A793D3B0-72FB-4AF1-8823-F22B37A07803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A793D3B0-72FB-4AF1-8823-F22B37A07803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A793D3B0-72FB-4AF1-8823-F22B37A07803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A793D3B0-72FB-4AF1-8823-F22B37A07803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99236366-93A8-49D8-BF94-35657CDB49DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99236366-93A8-49D8-BF94-35657CDB49DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99236366-93A8-49D8-BF94-35657CDB49DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99236366-93A8-49D8-BF94-35657CDB49DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{729FE736-D11B-4042-A539-40BCE9262EAC} = {F719C22C-12A0-4507-A7FE-52CA117D4AA1}
+		{A793D3B0-72FB-4AF1-8823-F22B37A07803} = {F719C22C-12A0-4507-A7FE-52CA117D4AA1}
+		{99236366-93A8-49D8-BF94-35657CDB49DB} = {88F1C2DD-86E4-4231-9248-8690C5C0DEBB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A78CC9AA-1A8F-4D0A-B3EB-9DAD8D07A67E}
