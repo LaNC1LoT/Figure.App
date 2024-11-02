@@ -2,5 +2,5 @@
 
 public interface IFigure
 {
-    decimal GetArea();
+    double GetArea();
 }

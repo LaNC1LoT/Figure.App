@@ -1,22 +1,14 @@
-﻿using Figure.Lib.Helpers;
-
-namespace Figure.Lib.Figures;
+﻿namespace Figure.Lib.Figures;
 
 public sealed class Circle : IFigure
 {
-    public decimal Radius { get; }
+    public double Radius { get; }
 
-    private Circle(decimal radius)
+    public Circle(double radius)
     {
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(radius);
         Radius = radius;
     }
 
-    public static Circle Create(decimal radius)
-    {
-        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(radius, nameof(radius));
-        return new Circle(radius);
-    }
-
-    public decimal GetArea() => FigureHelper.PI * Radius * Radius;
-
+    public double GetArea() => Math.PI * Radius * Radius;
 }

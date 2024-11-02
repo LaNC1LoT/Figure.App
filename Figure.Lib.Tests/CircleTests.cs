@@ -1,15 +1,15 @@
 using Figure.Lib.Figures;
-using Figure.Lib.Helpers;
 
 namespace Figure.Lib.Tests;
 
 public class CircleTests
 {
-    [Fact]
-    public void Create_WithValidRadius_ShouldReturnCircleInstance()
+    [Theory]
+    [InlineData(1)]
+    [InlineData(4)]
+    public void Create_WithValidRadius_ShouldReturnCircleInstance(double radius)
     {
-        var radius = 5m;
-        var circle = Circle.Create(radius);
+        var circle = new Circle(radius);
 
         Assert.Equal(radius, circle.Radius);
     }
@@ -17,17 +17,18 @@ public class CircleTests
     [Theory]
     [InlineData(0)]
     [InlineData(-5)]
-    public void Create_WithNonPositiveRadius_ShouldThrowArgumentOutOfRangeException(decimal radius)
+    public void Create_WithNonPositiveRadius_ShouldThrowArgumentOutOfRangeException(double radius)
     {
-        Assert.Throws<ArgumentOutOfRangeException>(() => Circle.Create(radius));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new Circle(radius));
     }
 
-    [Fact]
-    public void GetArea_WithValidRadius_ShouldReturnCorrectArea()
+    [Theory]
+    [InlineData(1)]
+    [InlineData(4)]
+    public void GetArea_WithValidRadius_ShouldReturnCorrectArea(double radius)
     {
-        var radius = 5m;
-        var circle = Circle.Create(radius);
-        var expectedArea = FigureHelper.PI * radius * radius;
+        var circle = new Circle(radius);
+        var expectedArea = Math.PI * radius * radius;
 
         Assert.Equal(expectedArea, circle.GetArea());
     }

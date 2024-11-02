@@ -1,8 +1,11 @@
 ﻿using Figure.Lib.Figures;
 
-List<IFigure> shapes = [ Circle.Create(5), Triangle.Create(3, 4, 5) ];
+List<IFigure> figures = [ new Circle(5), new Triangle(0.1, 0.1, 0.1) ];
 
-foreach (var shape in shapes)
+var triangle = new Triangle(0.3, 0.4, 0.5);
+Console.WriteLine($"Треугольник прямоугольные: {triangle.IsRightTriangle()}");
+
+foreach (var figure in figures)
 {
-    Console.WriteLine($"Площадь фигуры: {shape.GetArea()}");
+    Console.WriteLine($"Площадь фигуры: {figure.GetArea()}");
 }
