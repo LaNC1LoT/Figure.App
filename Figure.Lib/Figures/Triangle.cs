@@ -1,6 +1,6 @@
 ﻿namespace Figure.Lib.Figures;
 
-public sealed class Triangle : IFigure
+public class Triangle : IFigure
 {
     public double SideA { get; }
     public double SideB { get; }

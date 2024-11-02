@@ -1,6 +1,6 @@
 ﻿namespace Figure.Lib.Figures;
 
-public sealed class Circle : IFigure
+public class Circle : IFigure
 {
     public double Radius { get; }
 
